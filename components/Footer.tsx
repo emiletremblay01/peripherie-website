@@ -176,7 +176,7 @@ export default function Footer() {
                 type="submit"
                 className="mb-6 mt-3 cursor-pointer rounded-full border border-black  bg-footer pb-0 pt-0.5 text-base text-black hover:bg-gray-600 hover:bg-opacity-5 active:bg-opacity-10  "
               >
-                S'INSCRIRE À L'INFOLETTRE
+                S’INSCRIRE À L’INFOLETTRE
               </Button>
             </form>
           </Form>

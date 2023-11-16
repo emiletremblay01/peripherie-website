@@ -36,7 +36,7 @@ export default function Accueil() {
             Périphérie est une publication imprimée qui sonde les marges des
             mondes créatifs via des portraits subjectifs, des narrations
             immersives et des entrevues intimistes. Notre terrain de jeu?
-            L'émergence, l'ombre, l'alternatif.
+            L’émergence, l’ombre, l’alternatif.
           </p>
           {/* ARROW BUTTON */}
           <Button

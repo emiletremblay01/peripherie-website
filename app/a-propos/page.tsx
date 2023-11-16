@@ -25,32 +25,32 @@ export default function APropos() {
         <hr className=" mb-4 mt-6 hidden border-black lg:block" />
         <div className=" lg:flex">
           <h1 className="mt-24 font-bold lg:mt-0 lg:grow-0 lg:basis-80 lg:font-normal lg:leading-5 ">
-            L'essence de Périphérie
+            L’essence de Périphérie
           </h1>
           <hr className="mb-1 mt-2 border-black lg:hidden" />
 
           <div className="lg:flex-1">
             <p className=" mb-4 leading-5 ">
-              De l'architecture à la bédé, en passant par les arts culinaires et
-              et l'urbanisme, la création est un monde infiniment vaste, qu'il
-              nous appartient de redéfinir. Et c'est le pari de notre jeune
-              équipe : proposer un repère imprimé qui mise sur l'exploration
-              d'une sélection éclectique de sujets intemporels, présentés dans
+              De l’architecture à la bédé, en passant par les arts culinaires et
+              et l’urbanisme, la création est un monde infiniment vaste, qu’il
+              nous appartient de redéfinir. Et c’est le pari de notre jeune
+              équipe : proposer un repère imprimé qui mise sur l’exploration
+              d’une sélection éclectique de sujets intemporels, présentés dans
               une variété de formats longs.
             </p>
             <p className=" mb-4 leading-5 ">
-              Notre terrain de jeu ? L'émergence, l'ombre et l'alternatif.
+              Notre terrain de jeu ? L’émergence, l’ombre et l’alternatif.
               Périphérie sonde les marges des mondes créatifs via des portraits
               subjectifs, des narrations immersives et des entrevues intimistes.
-              Notre équipe estime qu'il importe de produire des contenus riches,
+              Notre équipe estime qu’il importe de produire des contenus riches,
               tant dans le fond que dans la forme, qui célèbrent le travail
-              d'artistes émergent·es et de créateur·rices qui oeuvrent en
-              périphérie de la culture. Chaque numéro compte plus d'une centaine
-              de pages et s'articule autour d'un thème relatif à la création.
+              d’artistes émergent·es et de créateur·rices qui oeuvrent en
+              périphérie de la culture. Chaque numéro compte plus d’une centaine
+              de pages et s’articule autour d’un thème relatif à la création.
             </p>
             <p className=" mb-4 leading-5 ">
               Périphérie est en vente dans une vingtaine de librairies
-              indépendantes et boutiques d'art à travers le Québec.
+              indépendantes et boutiques d’art à travers le Québec.
             </p>
           </div>
         </div>
@@ -59,7 +59,7 @@ export default function APropos() {
         <hr className="mb-4   hidden border-black lg:block" />
         <div className="lg:flex">
           <h1 className=" font-bold lg:basis-80 lg:font-normal lg:leading-5 ">
-            L'équipe
+            L’équipe
           </h1>
           <hr className="mb-1 mt-2 border-black lg:hidden" />
           <div className="lg:flex-1">

@@ -64,7 +64,7 @@ export function BoutiqueCard({ data }: BoutiqueCardProps) {
             onClick={toggleIsOpened}
             className="flex w-fit flex-auto items-center gap-2 hover:opacity-80 "
           >
-            Plus d'infos
+            Plus d’infos
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
