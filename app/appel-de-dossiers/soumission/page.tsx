@@ -162,7 +162,7 @@ export default function Soumission() {
                 <label className="font-bold">Description de l’oeuvre</label>
                 <FormControl>
                   <Textarea
-                    placeholder="Description de l'oeuvre (facultatif) "
+                    placeholder="Description de l’oeuvre (facultatif) "
                     className=" h-48 resize-none  bg-footer placeholder:text-gray-400"
                     {...field}
                   />
