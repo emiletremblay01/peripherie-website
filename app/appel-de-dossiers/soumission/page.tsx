@@ -159,7 +159,7 @@ export default function Soumission() {
             name="description"
             render={({ field }) => (
               <FormItem>
-                <label className="font-bold">Description de l'oeuvre</label>
+                <label className="font-bold">Description de l’oeuvre</label>
                 <FormControl>
                   <Textarea
                     placeholder="Description de l'oeuvre (facultatif) "
