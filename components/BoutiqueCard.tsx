@@ -32,7 +32,10 @@ export function BoutiqueCard({ data }: BoutiqueCardProps) {
           )}
         >
           {/* Image */}
-          <Link href={`/boutique/${data.id}`}>
+          <Link
+            className="absolute h-full w-full"
+            href={`/boutique/${data.id}`}
+          >
             <Image
               placeholder="empty"
               src={data.images?.[0]?.url || ""}

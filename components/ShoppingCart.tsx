@@ -2,15 +2,13 @@
 
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useSearchParams } from "next/navigation";
 import { Transition } from "@headlessui/react";
 import { cn, formatCurrency } from "@/lib/utils";
 
 import useCart from "@/hooks/useCart";
 import { Button } from "@/components/ui/button";
-import { toast } from "react-hot-toast";
 import { StoreItem } from "@/types";
-
+import { v4 as uuidv4 } from "uuid";
 type ShoppingCartProps = {
   isOpen: boolean;
   className?: string;
@@ -80,7 +78,7 @@ export function ShoppingCart({ isOpen, className }: ShoppingCartProps) {
         return (
           <>
             {item && (
-              <div className="first:mt-28" key={item.id}>
+              <div className="first:mt-28" key={uuidv4()}>
                 <hr className="h-0.5  bg-gray-700" />
                 <div className="mb-5 flex">
                   <p className=" w-52">{item.name}</p>

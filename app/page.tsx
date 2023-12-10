@@ -2,10 +2,6 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
 
-import { AspectRatio } from "@/components/ui/aspect-ratio";
-
-const url = `${process.env.NEXT_PUBLIC_API_URL}/billboards`;
-
 export default function Accueil() {
   return (
     <>
@@ -66,9 +62,10 @@ export default function Accueil() {
         <div className="flex flex-col md:flex-row md:gap-4 ">
           <div className="flex flex-col md:flex-auto">
             <div className="relative z-0 h-96 w-full overflow-hidden md:aspect-video md:h-auto">
-              <img
+              <Image
                 src="https://picsum.photos/100/300"
                 alt=""
+                fill
                 className=" w-full object-cover "
               />
 
@@ -102,9 +99,10 @@ export default function Accueil() {
           </div>
           <div className="flex flex-col md:flex-auto">
             <div className="relative z-0 h-96  w-full overflow-hidden md:aspect-video md:h-auto">
-              <img
+              <Image
                 src="https://picsum.photos/100/300"
                 alt=""
+                fill
                 className=" w-full object-cover "
               />
               <p className=" absolute bottom-0 left-0 w-44 pb-2  pl-4 leading-5 text-white sm:top-0 sm:pt-3">

@@ -17,8 +17,11 @@ export default async function ProductDetails({
       <hr className="mx-4 mb-1 border-black sm:mt-0" />
       <div className="mb-16 flex flex-1 flex-col gap-5 px-4 ">
         <h1 className="mb-24 text-3xl font-bold ">Détails du produit</h1>
-        <div className="xl:mx-auto xl:w-full xl:max-w-7xl">
-          <ProductInfo product={product} />
+        <div className="flex flex-col xl:mx-auto xl:w-full xl:max-w-7xl">
+          <ProductInfo
+            classNames="flex max-w-sm flex-1 flex-col gap-1 self-center"
+            product={product}
+          />
         </div>
       </div>
     </section>

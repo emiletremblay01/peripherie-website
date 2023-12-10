@@ -197,12 +197,14 @@ export default function Footer() {
                   <AccordionTrigger className="py-0">
                     {ville.nom}
                   </AccordionTrigger>
-                  <AccordionContent>
-                    {ville.pointsDeVente.map((pointDeVente) => (
-                      <p key={uuidv4()} className="pl-2">
-                        {pointDeVente}
-                      </p>
-                    ))}
+                  <AccordionContent className="">
+                    <div className="float-right w-3/4  ">
+                      {ville.pointsDeVente.map((pointDeVente) => (
+                        <div key={uuidv4()} className=" border-t border-black">
+                          <p className="text-base">{pointDeVente}</p>
+                        </div>
+                      ))}
+                    </div>
                   </AccordionContent>
                 </AccordionItem>
               ))}

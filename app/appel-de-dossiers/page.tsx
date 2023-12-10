@@ -5,19 +5,8 @@ export default function AppelDeDossiers() {
   return (
     <div>
       <div className="relative mb-16 flex-1 lg:px-4 xl:mx-auto xl:w-full xl:max-w-7xl">
-        <div className="relative h-[26rem] w-full overflow-hidden sm:px-4 lg:aspect-[5/2] lg:h-auto lg:px-0 ">
-          <Image
-            src="https://picsum.photos/1248/416"
-            alt="Magazine Périphérie"
-            width={1248}
-            height={600}
-            className="min-h-full object-cover object-left"
-          />
-          {/* ARROW BUTTON */}
-          <Button
-            asChild
-            className="absolute bottom-0 left-0  h-fit w-full min-w-fit grow-0 bg-white sm:mx-4  sm:max-w-xs lg:mx-0 "
-          >
+        <div className="fixed bottom-6 z-40 h-fit  w-full min-w-fit grow-0 px-4 sm:mx-4   sm:max-w-xs sm:p-0 lg:mx-0 ">
+          <Button asChild className="w-full bg-white">
             <Link
               className="group/button "
               href="/appel-de-dossiers/soumission"
@@ -41,6 +30,16 @@ export default function AppelDeDossiers() {
               </svg>
             </Link>
           </Button>
+        </div>
+        <div className="relative h-[26rem] w-full overflow-hidden sm:px-4 lg:aspect-[5/2] lg:h-auto lg:px-0 ">
+          <Image
+            src="https://picsum.photos/1248/416"
+            alt="Magazine Périphérie"
+            width={1248}
+            height={600}
+            className="min-h-full object-cover object-left"
+          />
+          {/* ARROW BUTTON */}
         </div>
 
         <section className="flex flex-col gap-10 px-4 md:gap-16 lg:px-0">
@@ -242,34 +241,6 @@ export default function AppelDeDossiers() {
               </div>
             </div>
           </section>
-          {/* ARROW BUTTON */}
-          <Button
-            asChild
-            className="  z-50 h-fit w-full min-w-fit grow-0 self-center  bg-white sm:max-w-xs "
-          >
-            <Link
-              className="group/button "
-              href="/appel-de-dossiers/soumission"
-            >
-              <span className="animate-pulse group-hover/button:animate-none">
-                SOUMETTRE UNE OEUVRE
-              </span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.8}
-                stroke="currentColor"
-                className="h-4 w-4 transition-transform duration-100 ease-in-out group-hover/button:translate-x-1 "
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
-                />
-              </svg>
-            </Link>
-          </Button>
         </section>
       </div>
     </div>

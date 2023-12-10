@@ -23,6 +23,7 @@ import { v4 as uuidv4 } from "uuid";
 import { ShoppingCart } from "@/components/ShoppingCart";
 import { Button } from "@/components/ui/button";
 import useCart from "@/hooks/useCart";
+import Image from "next/image";
 
 const pages = [
   { id: uuidv4(), name: "Boutique", path: "/boutique" },
@@ -156,9 +157,11 @@ export default function Navbar() {
                 setMobileMenuOpen(false);
               }}
             >
-              <img
-                src="images/peripherie_logotype_noir.png"
+              <Image
+                src="/images/peripherie_logotype_noir.png"
                 alt="logo"
+                width={112}
+                height={47}
                 className=" w-28 -translate-x-2 invert"
               />
             </Link>

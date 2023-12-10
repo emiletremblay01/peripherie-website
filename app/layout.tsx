@@ -3,7 +3,7 @@ import "./globals.css";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
-import { ShoppingCart } from "@/components/ShoppingCart";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Périphérie Le Mag",
@@ -23,9 +23,11 @@ export default function RootLayout({
           id="logo-haut-gauche"
           className="fixed left-4 top-5 z-50 hidden w-16 mix-blend-difference invert sm:inline"
         >
-          <img
-            src="images/peripherie_logotype-variable_milieu_noir.png"
+          <Image
+            src="/images/peripherie_logotype-variable_milieu_noir.png"
             alt="logo"
+            width={64}
+            height={64}
             className="-translate-x-1 -rotate-90 pt-2"
           />
           <Link
@@ -42,9 +44,11 @@ export default function RootLayout({
           id="logo-bas-droite"
           className="fixed bottom-5 right-4 z-50 hidden w-16 mix-blend-difference invert sm:inline"
         >
-          <img
-            src="images/peripherie_logotype-variable_milieu_noir.png"
+          <Image
+            src="/images/peripherie_logotype-variable_milieu_noir.png"
             alt="logo"
+            width={64}
+            height={64}
             className="  -translate-x-1 rotate-90 pb-2"
           />
           <Link
