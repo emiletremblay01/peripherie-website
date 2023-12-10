@@ -8,11 +8,11 @@ export default function Accueil() {
       <div className="flex flex-1 flex-col items-stretch sm:px-4 xl:mx-auto xl:w-full xl:max-w-7xl">
         <div className=" relative z-0 h-[26rem] w-full overflow-hidden ">
           <Image
-            src="https://picsum.photos/1248/416"
+            src="/images/03Accueil/accueil_01_entete.jpg"
             alt="Magazine Périphérie"
             width={1248}
             height={416}
-            className="min-h-full object-cover"
+            className="absolute  left-0 top-1/2 min-h-full -translate-y-1/2 object-cover "
           />
           <p className=" absolute bottom-0 left-0 w-44 pb-2  pl-4 leading-5 text-white sm:top-0 sm:pt-3">
             Le mag des nouvelles marges{" "}
@@ -63,7 +63,7 @@ export default function Accueil() {
           <div className="flex flex-col md:flex-auto">
             <div className="relative z-0 h-96 w-full overflow-hidden md:aspect-video md:h-auto">
               <Image
-                src="https://picsum.photos/100/300"
+                src="/images/03Accueil/accueil_02_peripherie2.jpg"
                 alt=""
                 fill
                 className=" w-full object-cover "
@@ -100,7 +100,7 @@ export default function Accueil() {
           <div className="flex flex-col md:flex-auto">
             <div className="relative z-0 h-96  w-full overflow-hidden md:aspect-video md:h-auto">
               <Image
-                src="https://picsum.photos/100/300"
+                src="/images/03Accueil/accueil_03_peripherie1.jpg"
                 alt=""
                 fill
                 className=" w-full object-cover "
