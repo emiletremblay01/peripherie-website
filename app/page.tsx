@@ -47,7 +47,7 @@ export default function Accueil() {
                 viewBox="0 0 24 24"
                 strokeWidth={1.8}
                 stroke="currentColor"
-                className="h-4 w-4 transition-transform duration-100 ease-in-out group-hover/button:translate-x-1"
+                className="h-4 w-4 "
               >
                 <path
                   strokeLinecap="round"
@@ -60,7 +60,7 @@ export default function Accueil() {
         </div>
         <hr className=" mx-4 mb-20 mt-9 h-px border-0 bg-gray-700 sm:mx-0" />
         <div className="flex flex-col md:flex-row md:gap-4 ">
-          <div className="flex flex-col md:flex-auto">
+          <div className="flex flex-col md:flex-auto md:grow-0 md:basis-1/2">
             <div className="relative z-0 h-96 w-full overflow-hidden md:aspect-video md:h-auto">
               <Image
                 src="/images/03Accueil/accueil_02_peripherie2.jpg"
@@ -78,7 +78,7 @@ export default function Accueil() {
               asChild
               className=" mx-4 mb-16 mt-3 rounded-full sm:mx-0 sm:max-w-sm"
             >
-              <Link className="group/button" href="/a-propos">
+              <Link className="" href="/a-propos">
                 per1
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -86,7 +86,7 @@ export default function Accueil() {
                   viewBox="0 0 24 24"
                   strokeWidth={1.8}
                   stroke="currentColor"
-                  className="h-4 w-4 transition-transform duration-100 ease-in-out group-hover/button:translate-x-1"
+                  className="h-4 w-4 "
                 >
                   <path
                     strokeLinecap="round"
@@ -97,7 +97,7 @@ export default function Accueil() {
               </Link>
             </Button>
           </div>
-          <div className="flex flex-col md:flex-auto">
+          <div className="flex flex-col md:flex-auto md:grow-0 md:basis-1/2">
             <div className="relative z-0 h-96  w-full overflow-hidden md:aspect-video md:h-auto">
               <Image
                 src="/images/03Accueil/accueil_03_peripherie1.jpg"
@@ -122,7 +122,7 @@ export default function Accueil() {
                   viewBox="0 0 24 24"
                   strokeWidth={1.8}
                   stroke="currentColor"
-                  className="h-4 w-4 transition-transform duration-100 ease-in-out group-hover/button:translate-x-1"
+                  className="h-4 w-4 "
                 >
                   <path
                     strokeLinecap="round"

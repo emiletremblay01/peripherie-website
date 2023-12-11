@@ -1,18 +1,18 @@
 [
   {
-    "id": 1,
-    "nom": "La filiation dans la création",
-    "dateDeSortie": "2022",
-    "description": "La première édition de Périphérie propose de sonder la notion d'appartenance et de questionner la place qu'occupe la filiation dans la création. Disciplines abordées : cinéma, photographie, installation, typographie, céramique, design, littérature, psychologie, architecture, urbanisme, arts muraux, arts culinaires et poésie Artistes présenté·es : Lucie S. Tremblay, Loïc Darses, Charlotte Rainville, Geronimo Inutiq, Benoît Bodhuin, Ysella Lobb, Guillaume Sasseville, Daniel Canty, Thomas Davy, Ilana Pichon, Michel Lauzon, Mark Ramsay, Samy Benabed, Laura Doyle Péan et Caroline Dawson",
-    "imageUrl": "/images/peripherie1.jpg",
-    "isEditionActuelle": false
-  },
-  {
     "id": 2,
     "nom": "Créer dans les espaces seconds",
     "dateDeSortie": "2023",
     "description": "Dans sa deuxième édition, Périphérie explore le thème du « deux » à travers les regards d'une vingtaine d'artistes et d'acteur·rices des coulisses de la création. Cette édition présente aussi les oeuvres retenues dans le cadre de notre tout premier appel de dossiers. ",
     "imageUrl": "/images/peripherie2.jpg",
     "isEditionActuelle": true
+  },
+  {
+    "id": 1,
+    "nom": "La filiation dans la création",
+    "dateDeSortie": "2022",
+    "description": "La première édition de Périphérie propose de sonder la notion d'appartenance et de questionner la place qu'occupe la filiation dans la création. Disciplines abordées : cinéma, photographie, installation, typographie, céramique, design, littérature, psychologie, architecture, urbanisme, arts muraux, arts culinaires et poésie Artistes présenté·es : Lucie S. Tremblay, Loïc Darses, Charlotte Rainville, Geronimo Inutiq, Benoît Bodhuin, Ysella Lobb, Guillaume Sasseville, Daniel Canty, Thomas Davy, Ilana Pichon, Michel Lauzon, Mark Ramsay, Samy Benabed, Laura Doyle Péan et Caroline Dawson",
+    "imageUrl": "/images/peripherie1.jpg",
+    "isEditionActuelle": false
   }
 ]

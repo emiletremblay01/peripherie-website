@@ -19,6 +19,9 @@ export default function APropos() {
           fill={true}
           className="object-cover object-left-top sm:hidden"
         />
+        <p className=" absolute bottom-0 left-0 w-44 pb-2  pl-4 leading-5 text-white sm:top-0 sm:pt-3">
+          À propos de nous
+        </p>
       </div>
 
       <section className="px-4 sm:px-0">

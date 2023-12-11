@@ -174,9 +174,14 @@ export default function Footer() {
                 size="reset"
                 variant="default"
                 type="submit"
-                className="mb-6 mt-3 cursor-pointer rounded-full border border-black  bg-footer pb-0 pt-0.5 text-base text-black hover:bg-gray-600 hover:bg-opacity-5 active:bg-opacity-10  "
+                className="group relative mb-6 mt-3 cursor-pointer rounded-full border border-black  bg-footer pb-0 pt-0.5 text-base text-black hover:bg-gray-600 hover:bg-opacity-5 active:bg-opacity-10  "
               >
-                S’INSCRIRE À L’INFOLETTRE
+                <span className="group-hover:invisible">
+                  S’INSCRIRE À L’INFOLETTRE
+                </span>
+                <span className="invisible absolute top-1 font-g2ciao text-sm  group-hover:visible">
+                  S’INSCRIRE À L’INFOLETTRE
+                </span>
               </Button>
             </form>
           </Form>
@@ -194,14 +199,24 @@ export default function Footer() {
                   value={ville.nom}
                   className="border-black py-0 first:border-t"
                 >
-                  <AccordionTrigger className="py-0">
-                    {ville.nom}
+                  <AccordionTrigger className="group relative py-0">
+                    <span className="group-hover:invisible">{ville.nom}</span>
+                    <span className="invisible absolute top-1 -translate-y-px font-g2ciao text-sm  group-hover:visible">
+                      {ville.nom}
+                    </span>
                   </AccordionTrigger>
                   <AccordionContent className="">
                     <div className="float-right w-3/4  ">
                       {ville.pointsDeVente.map((pointDeVente) => (
                         <div key={uuidv4()} className=" border-t border-black">
-                          <p className="text-base">{pointDeVente}</p>
+                          <p className="group relative text-base">
+                            <span className="group-hover:invisible">
+                              {pointDeVente}
+                            </span>
+                            <span className="invisible absolute left-0 top-1 -translate-y-px font-g2ciao text-sm  group-hover:visible">
+                              {pointDeVente}
+                            </span>
+                          </p>
                         </div>
                       ))}
                     </div>
