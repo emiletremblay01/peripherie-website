@@ -1,0 +1,33 @@
+[
+  {
+    "nom": "Montréal",
+    "pointsDeVente": [
+      "Boutique Atelier 10",
+      "Librairie Raffin - Plaza St-Hubert",
+      "Librairie Un livre à soi",
+      "Librairie Gallimard",
+      "Librairie JASMIN de l'UQÀM",
+      "Boutique Ex-voto",
+      "Boutique du Livart",
+      "Boutique du Musée McCord",
+      "Boutique du Centre canadien d'architecture"
+    ]
+  },
+  {
+    "nom": "Québec",
+    "pointsDeVente": [
+      "Librairie du Quartier",
+      "Boutique Un Coin du Monde",
+      "Boutique du MNBAQ",
+      "Librairie La Liberté"
+    ]
+  },
+  {
+    "nom": "Trois-Rivières",
+    "pointsDeVente": ["Librairie L'Exèdre"]
+  },
+  {
+    "nom": "Mont-Tremblant",
+    "pointsDeVente": ["Librairie Carpe Diem"]
+  }
+]

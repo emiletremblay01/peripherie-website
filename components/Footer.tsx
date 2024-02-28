@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { v4 as uuidv4 } from "uuid";
 
+import dataVilles from "@/data/villesAvecPointsDeVentes.json";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -23,48 +24,11 @@ import {
 } from "@/components/ui/accordion";
 
 type villeAvecPointsDeVente = {
-  id: string;
   nom: string;
   pointsDeVente: string[];
 };
 
-const villesAvecPointsDeVente: villeAvecPointsDeVente[] = [
-  {
-    id: uuidv4(),
-    nom: "Montréal",
-    pointsDeVente: [
-      "Boutique Atelier 10",
-      "Librairie Raffin - Plaza St-Hubert",
-      "Librairie Un livre à soi",
-      "Librairie Gallimard",
-      "Librairie JASMIN de l'UQÀM",
-      "Boutique Ex-voto",
-      "Boutique du Livart",
-      "Boutique du Musée McCord",
-      "Boutique du Centre canadien d'architecture",
-    ],
-  },
-  {
-    id: uuidv4(),
-    nom: "Québec",
-    pointsDeVente: [
-      "Librairie du Quartier",
-      "Boutique Un Coin du Monde",
-      "Boutique du MNBAQ",
-      "Librairie La Liberté",
-    ],
-  },
-  {
-    id: uuidv4(),
-    nom: "Trois-Rivières",
-    pointsDeVente: ["Librairie L'Exèdre"],
-  },
-  {
-    id: uuidv4(),
-    nom: "Mont-Tremblant",
-    pointsDeVente: ["Librairie Carpe Diem"],
-  },
-];
+const villesAvecPointsDeVente: villeAvecPointsDeVente[] = dataVilles;
 
 const formSchema = z.object({
   email: z.string().email(),
@@ -90,12 +54,12 @@ export default function Footer() {
     <footer className="w-full shrink-0 border-t border-gray-900 bg-footer px-4 pt-4">
       <div className="mx-auto justify-between gap-2 sm:grid sm:grid-cols-2 sm:grid-rows-1">
         {/* LEFT SECTION */}
-        <div className="sm:max-w-xs lg:max-w-sm 2xl:max-w-lg  ">
+        <div className="sm:max-w-xs lg:max-w-sm 2xl:max-w-lg">
           <p className="">
             <a
               href="https://www.facebook.com/PeripherieLeMag"
               target="_blank"
-              className="group "
+              className="group"
             >
               <span className="group-hover:opacity-80">Facebook</span>{" "}
               <svg
@@ -118,7 +82,7 @@ export default function Footer() {
             <a
               href="https://www.instagram.com/peripherie_lemag/"
               target="_blank"
-              className="group "
+              className="group"
             >
               <span className="group-hover:opacity-80">Instagram</span>{" "}
               <svg
@@ -149,7 +113,7 @@ export default function Footer() {
           <Form {...form}>
             <form
               onSubmit={form.handleSubmit(onSubmit)}
-              className="mt-8 flex w-full flex-col sm:max-w-xs lg:max-w-sm 2xl:max-w-lg "
+              className="mt-8 flex w-full flex-col sm:max-w-xs lg:max-w-sm 2xl:max-w-lg"
             >
               <FormField
                 control={form.control}
@@ -163,7 +127,7 @@ export default function Footer() {
                       <Input
                         placeholder="adresse@courriel.com"
                         {...field}
-                        className="border-b border-black bg-footer p-0 "
+                        className="border-b border-black bg-footer p-0"
                         required
                       />
                     </FormControl>
@@ -174,12 +138,12 @@ export default function Footer() {
                 size="reset"
                 variant="default"
                 type="submit"
-                className="group relative mb-6 mt-3 cursor-pointer rounded-full border border-black  bg-footer pb-0 pt-0.5 text-base text-black hover:bg-gray-600 hover:bg-opacity-5 active:bg-opacity-10  "
+                className="group relative mb-6 mt-3 cursor-pointer rounded-full border border-black bg-footer pb-0 pt-0.5 text-base text-black hover:bg-gray-600 hover:bg-opacity-5 active:bg-opacity-10"
               >
                 <span className="group-hover:invisible">
                   S’INSCRIRE À L’INFOLETTRE
                 </span>
-                <span className="invisible absolute top-1 font-g2ciao text-sm  group-hover:visible">
+                <span className="invisible absolute top-1 font-g2ciao text-sm group-hover:visible">
                   S’INSCRIRE À L’INFOLETTRE
                 </span>
               </Button>
@@ -187,33 +151,33 @@ export default function Footer() {
           </Form>
         </div>
         {/* RIGHT SECTION */}
-        <div className="sm:relative sm:max-w-xs lg:max-w-sm 2xl:max-w-lg   ">
-          <p className=" mb-3 sm:min-w-max sm:max-w-xs lg:max-w-sm 2xl:max-w-lg  ">
+        <div className="sm:relative sm:max-w-xs lg:max-w-sm 2xl:max-w-lg">
+          <p className="mb-3 sm:min-w-max sm:max-w-xs lg:max-w-sm 2xl:max-w-lg">
             Points de vente
           </p>
-          <div className="sm:absolute sm:col-span-2 sm:w-full sm:max-w-xs lg:max-w-sm 2xl:max-w-lg  ">
+          <div className="sm:absolute sm:col-span-2 sm:w-full sm:max-w-xs lg:max-w-sm 2xl:max-w-lg">
             <Accordion type="single" collapsible>
               {villesAvecPointsDeVente.map((ville) => (
                 <AccordionItem
-                  key={ville.id}
+                  key={ville.nom}
                   value={ville.nom}
                   className="border-black py-0 first:border-t"
                 >
                   <AccordionTrigger className="group relative py-0">
                     <span className="group-hover:invisible">{ville.nom}</span>
-                    <span className="invisible absolute top-1 -translate-y-px font-g2ciao text-sm  group-hover:visible">
+                    <span className="invisible absolute top-1 -translate-y-px font-g2ciao text-sm group-hover:visible">
                       {ville.nom}
                     </span>
                   </AccordionTrigger>
                   <AccordionContent className="">
-                    <div className="float-right w-3/4  ">
+                    <div className="float-right w-3/4">
                       {ville.pointsDeVente.map((pointDeVente) => (
-                        <div key={uuidv4()} className=" border-t border-black">
+                        <div key={uuidv4()} className="border-t border-black">
                           <p className="group relative text-base">
                             <span className="group-hover:invisible">
                               {pointDeVente}
                             </span>
-                            <span className="invisible absolute left-0 top-1 -translate-y-px font-g2ciao text-sm  group-hover:visible">
+                            <span className="invisible absolute left-0 top-1 -translate-y-px font-g2ciao text-sm group-hover:visible">
                               {pointDeVente}
                             </span>
                           </p>
@@ -226,16 +190,16 @@ export default function Footer() {
             </Accordion>
           </div>
         </div>
-        <p className=" mt-24 sm:mb-0 sm:mt-14 sm:max-w-xs sm:leading-none lg:max-w-xl">
+        <p className="mt-24 sm:mb-0 sm:mt-14 sm:max-w-xs sm:leading-none lg:max-w-xl">
           © Périphérie
         </p>
-        <p className=" sm:col-start-1 sm:inline-block sm:max-w-xs lg:max-w-sm 2xl:max-w-lg  ">
+        <p className="sm:col-start-1 sm:inline-block sm:max-w-xs lg:max-w-sm 2xl:max-w-lg">
           Le mag des nouvelles marges{" "}
-          <span className=" font-g2ciao sm:max-w-xs lg:max-w-sm 2xl:max-w-lg ">
+          <span className="font-g2ciao sm:max-w-xs lg:max-w-sm 2xl:max-w-lg">
             créatives
           </span>
         </p>
-        <p className="mt-8  sm:col-start-1 sm:block sm:max-w-xs lg:max-w-sm 2xl:max-w-lg  ">
+        <p className="mt-8 sm:col-start-1 sm:block sm:max-w-xs lg:max-w-sm 2xl:max-w-lg">
           Design web par Émile Painchaud <br />
           Développement web par Émile Tremblay
         </p>

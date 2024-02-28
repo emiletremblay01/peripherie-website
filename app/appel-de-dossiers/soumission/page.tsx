@@ -4,6 +4,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 
+import { UploadButton } from "@/utils/uploadthing";
+import { OurFileRouter } from "@/utils/uploadthing";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -24,9 +26,7 @@ const FormSchema = z.object({
     message: "prenom must be at least 2 characters.",
   }),
   nom: z.string().min(1),
-  pronom: z
-    .enum(["elle", "il", "iel", "ielles", "ielles", "ielles"])
-    .optional(),
+  pronom: z.string().optional(),
   adresse_courriel: z.string().email(),
   adresse_civique: z.string().min(1),
   numero_telephone: z.string().min(1),
@@ -196,6 +196,11 @@ export default function Soumission() {
             render={({ field }) => (
               <FormItem>
                 <label className="font-bold">Fichier</label>
+                <UploadButton<OurFileRouter>
+                  endpoint="someEndpoint"
+                  onUploadComplete={(res: any) => console.log(res)}
+                  onUploadError={(err) => console.log(err)}
+                />
                 <FormControl>
                   <Input
                     type="file"
