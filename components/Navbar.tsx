@@ -20,10 +20,10 @@ import useCart from "@/hooks/useCart";
 import Image from "next/image";
 
 const pages = [
-  { id: uuidv4(), name: "Boutique", path: "/boutique" },
+  // { id: uuidv4(), name: "Boutique", path: "/boutique" },
   { id: uuidv4(), name: "Éditions", path: "/editions" },
   { id: uuidv4(), name: "À propos", path: "/a-propos" },
-  { id: uuidv4(), name: "Appel de dossiers", path: "/appel-de-dossiers" },
+  // { id: uuidv4(), name: "Appel de dossiers", path: "/appel-de-dossiers" },
 ];
 
 export default function Navbar() {
@@ -40,9 +40,9 @@ export default function Navbar() {
     <>
       <nav
         id="DESKTOP_NAVBAR"
-        className="relative hidden w-full sm:flex sm:justify-end  sm:px-4 sm:pb-16 sm:pt-6  sm:text-lg"
+        className="relative hidden w-full sm:flex sm:justify-end sm:px-4 sm:pb-16 sm:pt-6 sm:text-lg"
       >
-        <NavigationMenu className="hidden max-w-none  sm:flex sm:basis-full ">
+        <NavigationMenu className="hidden max-w-none sm:flex sm:basis-full">
           <NavigationMenuList className="flex gap-5">
             <Link
               href="/"
@@ -63,7 +63,7 @@ export default function Navbar() {
               >
                 <Link href={page.path} legacyBehavior passHref>
                   <NavigationMenuLink>
-                    <p className="font-bold group-hover/font:opacity-0 ">
+                    <p className="font-bold group-hover/font:opacity-0">
                       {page.name}
                     </p>
                     <p className="absolute top-0.5 z-10 hidden min-w-max font-g2ciao text-base group-hover/font:block">
@@ -89,7 +89,7 @@ export default function Navbar() {
             {/* ARROW BUTTON */}
             <Button
               asChild
-              className="  hidden h-fit w-56 max-w-sm flex-none  gap-4 lg:flex"
+              className="hidden h-fit w-56 max-w-sm flex-none gap-4 lg:flex"
             >
               <Link className="" href="/boutique">
                 PRÉCOMMANDER
@@ -99,7 +99,7 @@ export default function Navbar() {
                   viewBox="0 0 24 24"
                   strokeWidth={1.8}
                   stroke="currentColor"
-                  className="h-4 w-4 "
+                  className="h-4 w-4"
                 >
                   <path
                     strokeLinecap="round"
@@ -114,8 +114,8 @@ export default function Navbar() {
       </nav>
 
       <nav id="MOBILE_NAVBAR" className="sm:hidden">
-        <header className="fixed z-50  flex w-full items-center justify-between bg-transparent px-4 pt-2 mix-blend-difference sm:hidden">
-          <div className=" overflow-clip">
+        <header className="fixed z-50 flex w-full items-center justify-between bg-transparent px-4 pt-2 mix-blend-difference sm:hidden">
+          <div className="overflow-clip">
             <Link
               href="/"
               onClick={() => {
@@ -127,11 +127,11 @@ export default function Navbar() {
                 alt="logo"
                 width={112}
                 height={47}
-                className=" w-28 -translate-x-2 invert"
+                className="w-28 -translate-x-2 invert"
               />
             </Link>
           </div>
-          <div className="flex items-center gap-5 bg-transparent ">
+          <div className="flex items-center gap-5 bg-transparent">
             <button
               className={cn("invert hover:opacity-80", {
                 invisible: getTotalOfItemsInCart() <= 0,
@@ -149,24 +149,24 @@ export default function Navbar() {
                 toggleMenu();
                 closeCart();
               }}
-              className="group  flex h-5 w-6 flex-col justify-between overflow-visible  "
+              className="group flex h-5 w-6 flex-col justify-between overflow-visible"
             >
               <div
                 className={cn(
-                  "h-1 w-full origin-right bg-white   transition-transform ease-in-out",
+                  "h-1 w-full origin-right bg-white transition-transform ease-in-out",
                   { "-rotate-45 scale-95": isMobileMenuOpen },
                 )}
               ></div>
               <div
                 className={cn(
-                  "h-1 w-full bg-white  transition-transform ease-in-out",
+                  "h-1 w-full bg-white transition-transform ease-in-out",
                   { "translate-x-16": isMobileMenuOpen },
                 )}
               ></div>
 
               <div
                 className={cn(
-                  "h-1 w-full origin-right bg-white  transition-transform ease-in-out",
+                  "h-1 w-full origin-right bg-white transition-transform ease-in-out",
                   { "rotate-45 scale-95": isMobileMenuOpen },
                 )}
               ></div>
@@ -187,12 +187,12 @@ export default function Navbar() {
         >
           {pages.map((page) => (
             <div className="first:mt-28" key={page.name}>
-              <hr className="mb-1 h-0.5  bg-gray-700" />
-              <p className="text-3xl font-bold ">
+              <hr className="mb-1 h-0.5 bg-gray-700" />
+              <p className="text-3xl font-bold">
                 <Link
                   onClick={toggleMenu}
                   href={page.path}
-                  className=" hover:text-gray-300"
+                  className="hover:text-gray-300"
                 >
                   {page.name}
                 </Link>
