@@ -89,7 +89,7 @@ export default function Navbar() {
             {/* ARROW BUTTON */}
             <Button
               asChild
-              className="hidden h-fit w-56 max-w-sm flex-none gap-4 lg:flex"
+              className="hidden h-fit w-56 max-w-sm flex-none gap-4 lg:hidden"
             >
               <Link className="" href="/boutique">
                 PRÉCOMMANDER
