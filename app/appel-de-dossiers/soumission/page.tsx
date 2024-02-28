@@ -4,8 +4,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 
-import { UploadButton } from "@/utils/uploadthing";
-import { OurFileRouter } from "@/utils/uploadthing";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -58,11 +56,11 @@ export default function Soumission() {
   return (
     <div className="mb-16 px-4 xl:mx-auto xl:w-full xl:max-w-7xl">
       <div className="h-20 w-full sm:hidden"></div>
-      <hr className=" mb-1  border-black sm:mt-0" />
+      <hr className="mb-1 border-black sm:mt-0" />
       <h1 className="mb-24 text-3xl font-bold">Remise du dossier</h1>
       <h1 className="mb-2 font-bold">Informations personnelles</h1>
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className=" space-y-2">
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-2">
           <FormField
             control={form.control}
             name="prenom"
@@ -163,7 +161,7 @@ export default function Soumission() {
                 <FormControl>
                   <Textarea
                     placeholder="Description de l’oeuvre (facultatif) "
-                    className=" h-48 resize-none  bg-footer placeholder:text-gray-400"
+                    className="h-48 resize-none bg-footer placeholder:text-gray-400"
                     {...field}
                   />
                 </FormControl>
@@ -181,7 +179,7 @@ export default function Soumission() {
                 <FormControl>
                   <Textarea
                     placeholder="Description de la démarche "
-                    className=" h-48 resize-none bg-footer placeholder:text-gray-400"
+                    className="h-48 resize-none bg-footer placeholder:text-gray-400"
                     {...field}
                   />
                 </FormControl>
@@ -190,33 +188,9 @@ export default function Soumission() {
           />
           <div className="invisible h-16"></div>
 
-          <FormField
-            control={form.control}
-            name="fichier"
-            render={({ field }) => (
-              <FormItem>
-                <label className="font-bold">Fichier</label>
-                <UploadButton<OurFileRouter>
-                  endpoint="someEndpoint"
-                  onUploadComplete={(res: any) => console.log(res)}
-                  onUploadError={(err) => console.log(err)}
-                />
-                <FormControl>
-                  <Input
-                    type="file"
-                    {...field}
-                    className="rounded bg-footer p-2 text-gray-500 file:mr-4 file:rounded-lg file:border-0 file:bg-gray-400 file:px-4 file:py-2 file:text-sm file:font-semibold file:text-white hover:file:cursor-pointer hover:file:bg-gray-500"
-                  />
-                </FormControl>
-                <FormDescription>
-                  Un seul fichier peut être envoyé
-                </FormDescription>
-              </FormItem>
-            )}
-          />
           <div className="invisible h-16"></div>
 
-          <Button type="submit" className="w-full justify-center ">
+          <Button type="submit" className="w-full justify-center">
             SOUMETTRE
           </Button>
         </form>
@@ -243,8 +217,8 @@ const CustomInputExample = () => {
       <label
         htmlFor="custom-input"
         className="mr-4 block cursor-pointer rounded-md border-0 bg-pink-50
-            px-4 py-2 text-sm  font-semibold
-            text-pink-700  hover:bg-pink-100"
+            px-4 py-2 text-sm font-semibold
+            text-pink-700 hover:bg-pink-100"
       >
         Choose file
       </label>
