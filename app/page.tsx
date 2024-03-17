@@ -115,7 +115,7 @@ export default function Accueil() {
               className="mx-4 mb-16 mt-3 rounded-full sm:mx-0 sm:max-w-sm"
             >
               <Link className="group/button" href="/a-propos">
-                En s
+                En savoir plus
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"

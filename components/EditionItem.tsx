@@ -3,8 +3,10 @@ import Image from "next/image";
 
 type EditionItemProps = {
   data: EditionItem;
+  href: string;
 };
-export default function EditionItem({ data }: EditionItemProps) {
+
+export default function EditionItem({ data, href }: EditionItemProps) {
   return (
     <section>
       <hr className="border-black" />
@@ -16,7 +18,7 @@ export default function EditionItem({ data }: EditionItemProps) {
           </div>
           <p className="flex-1">{data.dateDeSortie}</p>
           <p className="h-fit md:flex-1">
-            <a href="" className="group hover:opacity-80">
+            <a href={href} className="group hover:opacity-80">
               En savoir plus{" "}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
