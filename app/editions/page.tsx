@@ -22,7 +22,11 @@ export default function Editions() {
         <h1 className="mb-24 text-3xl font-bold">Éditions</h1>
         <div className="space-y-10 xl:mx-auto xl:w-full xl:max-w-7xl">
           {editions.map((edition) => (
-            <EditionItem key={edition.id} data={edition} href="" />
+            <EditionItem
+              key={edition.id}
+              data={edition}
+              href={`${pathname}/${edition.id}`}
+            />
           ))}
         </div>
       </div>
