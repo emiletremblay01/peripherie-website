@@ -5,6 +5,7 @@ import editions from "@/data/editions.json";
 import EditionItem from "@/components/EditionItem";
 import { usePathname } from "next/navigation";
 export default function Editions() {
+  const pathname = usePathname();
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -13,7 +14,6 @@ export default function Editions() {
 
   if (!isMounted) return null;
 
-  const pathname = usePathname();
   return (
     <section className="flex-1">
       <div className="h-20 w-full sm:hidden"></div>
