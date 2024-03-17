@@ -1,6 +1,7 @@
 "use client";
 import editions from "@/data/editions.json";
-import EditionItem from "@/components/EditionItem";
+
+import EditionItemDetailed from "@/components/EditionItemDetailed";
 
 export default function Edition({ params }: { params: { id: string } }) {
   for (const edition of editions) {
@@ -12,7 +13,7 @@ export default function Edition({ params }: { params: { id: string } }) {
           <div className="mb-16 flex flex-1 flex-col gap-5 px-4">
             <h1 className="mb-24 text-3xl font-bold">Édition actuelle</h1>
             <div className="xl:mx-auto xl:w-full xl:max-w-7xl">
-              <EditionItem data={edition} href="" />
+              <EditionItemDetailed data={edition} />
             </div>
           </div>
         </section>

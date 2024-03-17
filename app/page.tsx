@@ -78,7 +78,7 @@ export default function Accueil() {
               asChild
               className="mx-4 mb-16 mt-3 rounded-full sm:mx-0 sm:max-w-sm"
             >
-              <Link className="" href="/a-propos">
+              <Link className="" href="/editions/2">
                 En savoir plus
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -114,7 +114,7 @@ export default function Accueil() {
               asChild
               className="mx-4 mb-16 mt-3 rounded-full sm:mx-0 sm:max-w-sm"
             >
-              <Link className="group/button" href="/a-propos">
+              <Link className="group/button" href="/editions/1">
                 En savoir plus
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
