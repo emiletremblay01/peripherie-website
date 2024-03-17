@@ -6,21 +6,21 @@ export default function Accueil() {
   return (
     <>
       <div className="flex flex-1 flex-col items-stretch sm:px-4 xl:mx-auto xl:w-full xl:max-w-7xl">
-        <div className=" relative z-0 h-[26rem] w-full overflow-hidden ">
+        <div className="relative z-0 h-[26rem] w-full overflow-hidden">
           <Image
             src="/images/03Accueil/accueil_01_entete.jpg"
             alt="Magazine Périphérie"
             width={1248}
             height={416}
-            className="absolute  left-0 top-1/2 min-h-full -translate-y-1/2 object-cover "
+            className="absolute left-0 top-1/2 min-h-full -translate-y-1/2 object-cover"
           />
-          <p className=" absolute bottom-0 left-0 w-44 pb-2  pl-4 leading-5 text-white sm:top-0 sm:pt-3">
+          <p className="absolute bottom-0 left-0 w-44 pb-2 pl-4 leading-5 text-white sm:top-0 sm:pt-3">
             Le mag des nouvelles marges{" "}
-            <span className=" font-g2ciao">créatives</span>
+            <span className="font-g2ciao">créatives</span>
           </p>
         </div>
         <div className="flex flex-col px-4 sm:flex-row sm:gap-2 sm:px-0">
-          <p className=" mt-3 text-xl  leading-6  sm:max-w-3xl sm:px-0 sm:text-base sm:leading-5">
+          <p className="mt-3 text-xl leading-6 sm:max-w-3xl sm:px-0 sm:text-base sm:leading-5">
             <svg
               id="Calque_1"
               xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +47,7 @@ export default function Accueil() {
                 viewBox="0 0 24 24"
                 strokeWidth={1.8}
                 stroke="currentColor"
-                className="h-4 w-4 "
+                className="h-4 w-4"
               >
                 <path
                   strokeLinecap="round"
@@ -58,35 +58,35 @@ export default function Accueil() {
             </Link>
           </Button>
         </div>
-        <hr className=" mx-4 mb-20 mt-9 h-px border-0 bg-gray-700 sm:mx-0" />
-        <div className="flex flex-col md:flex-row md:gap-4 ">
+        <hr className="mx-4 mb-20 mt-9 h-px border-0 bg-gray-700 sm:mx-0" />
+        <div className="flex flex-col md:flex-row md:gap-4">
           <div className="flex flex-col md:flex-auto md:grow-0 md:basis-1/2">
             <div className="relative z-0 h-96 w-full overflow-hidden md:aspect-video md:h-auto">
               <Image
                 src="/images/03Accueil/accueil_02_peripherie2.jpg"
                 alt=""
                 fill
-                className=" w-full object-cover "
+                className="w-full object-cover"
               />
 
-              <p className=" absolute bottom-0 left-0 w-44 pb-2  pl-4 leading-5 text-white sm:top-0 sm:pt-3">
+              <p className="absolute bottom-0 left-0 w-44 pb-2 pl-4 leading-5 text-white sm:top-0 sm:pt-3">
                 Périphérie #2 <br /> Créer dans les espaces seconds
               </p>
             </div>
             {/* ARROW BUTTON */}
             <Button
               asChild
-              className=" mx-4 mb-16 mt-3 rounded-full sm:mx-0 sm:max-w-sm"
+              className="mx-4 mb-16 mt-3 rounded-full sm:mx-0 sm:max-w-sm"
             >
               <Link className="" href="/a-propos">
-                per1
+                En savoir plus
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={1.8}
                   stroke="currentColor"
-                  className="h-4 w-4 "
+                  className="h-4 w-4"
                 >
                   <path
                     strokeLinecap="round"
@@ -98,14 +98,14 @@ export default function Accueil() {
             </Button>
           </div>
           <div className="flex flex-col md:flex-auto md:grow-0 md:basis-1/2">
-            <div className="relative z-0 h-96  w-full overflow-hidden md:aspect-video md:h-auto">
+            <div className="relative z-0 h-96 w-full overflow-hidden md:aspect-video md:h-auto">
               <Image
                 src="/images/03Accueil/accueil_03_peripherie1.jpg"
                 alt=""
                 fill
-                className=" w-full object-cover "
+                className="w-full object-cover"
               />
-              <p className=" absolute bottom-0 left-0 w-44 pb-2  pl-4 leading-5 text-white sm:top-0 sm:pt-3">
+              <p className="absolute bottom-0 left-0 w-44 pb-2 pl-4 leading-5 text-white sm:top-0 sm:pt-3">
                 Périphérie #1 <br /> La filiation dans la création
               </p>
             </div>
@@ -115,14 +115,14 @@ export default function Accueil() {
               className="mx-4 mb-16 mt-3 rounded-full sm:mx-0 sm:max-w-sm"
             >
               <Link className="group/button" href="/a-propos">
-                per2
+                En savoir pluss
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={1.8}
                   stroke="currentColor"
-                  className="h-4 w-4 "
+                  className="h-4 w-4"
                 >
                   <path
                     strokeLinecap="round"

@@ -1,4 +1,4 @@
-import { EditionItem } from "@/types";
+import type { EditionItem } from "@/types";
 import Image from "next/image";
 
 type EditionItemProps = {
@@ -8,7 +8,7 @@ export default function EditionItem({ data }: EditionItemProps) {
   return (
     <section>
       <hr className="border-black" />
-      <div className="flex h-52 justify-between  ">
+      <div className="flex h-52 justify-between">
         <div className="flex flex-col gap-3 pt-1 md:max-w-6xl md:flex-1 md:flex-row">
           <div className="flex flex-col gap-3 md:flex-1">
             <p>Périphérie #{data.id}</p>
@@ -24,7 +24,7 @@ export default function EditionItem({ data }: EditionItemProps) {
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="currentColor"
-                className="inline h-4 w-4 transition-transform duration-150 ease-in-out group-hover:translate-x-1 "
+                className="inline h-4 w-4 transition-transform duration-150 ease-in-out group-hover:translate-x-1"
               >
                 <path
                   strokeLinecap="round"
