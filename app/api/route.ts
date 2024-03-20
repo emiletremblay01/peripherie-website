@@ -34,7 +34,7 @@ export async function POST(req: Request) {
   } catch (error: any | AxiosError) {
     if (axios.isAxiosError(error)) {
       const axiosError: AxiosError = error;
-      if (axiosError.response && axiosError.response.status === 400) {
+      if (axiosError.response) {
         return NextResponse.json(axiosError.response.data);
       }
     }
