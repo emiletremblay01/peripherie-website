@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Link from "next/link";
 import Image from "next/image";
 import { Toaster } from "@/components/ui/toaster";
+import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Périphérie Le Mag",
@@ -18,7 +19,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr">
-      <body className="debug-screens flex min-h-screen flex-col bg-white font-abcsocial">
+      <body
+        className={cn(
+          "flex min-h-screen flex-col bg-white font-abcsocial",
+          process.env.NODE_ENV === "development" && "debug-screens",
+        )}
+      >
         {/* LOGO HAUT */}
         <div
           id="logo-haut-gauche"
