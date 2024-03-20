@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
 import Image from "next/image";
+import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
   title: "Périphérie Le Mag",
@@ -32,7 +33,7 @@ export default function RootLayout({
           />
           <Link
             href="/"
-            className="absolute top-0  h-full w-1/3 bg-opacity-0"
+            className="absolute top-0 h-full w-1/3 bg-opacity-0"
           ></Link>
           <Link
             href="/"
@@ -49,20 +50,21 @@ export default function RootLayout({
             alt="logo"
             width={64}
             height={64}
-            className="  -translate-x-1 rotate-90 pb-2"
+            className="-translate-x-1 rotate-90 pb-2"
           />
           <Link
             href="/"
-            className="absolute right-0 top-0  h-full w-1/3 bg-opacity-0"
+            className="absolute right-0 top-0 h-full w-1/3 bg-opacity-0"
           ></Link>
           <Link
             href="/"
-            className="absolute bottom-0  h-1/3 w-full bg-opacity-0"
+            className="absolute bottom-0 h-1/3 w-full bg-opacity-0"
           ></Link>
         </div>
         <Navbar />
         {children}
         <Footer />
+        <Toaster />
       </body>
     </html>
   );

@@ -1,27 +1,16 @@
 "use client";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import * as z from "zod";
+
 import { v4 as uuidv4 } from "uuid";
 
 import dataVilles from "@/data/villesAvecPointsDeVentes.json";
-import { Button } from "@/components/ui/button";
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
+
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import NewsLetterSignUpForm from "./NewsLetterSignupForm";
 
 type villeAvecPointsDeVente = {
   nom: string;
@@ -30,26 +19,7 @@ type villeAvecPointsDeVente = {
 
 const villesAvecPointsDeVente: villeAvecPointsDeVente[] = dataVilles;
 
-const formSchema = z.object({
-  email: z.string().email(),
-});
-
 export default function Footer() {
-  // 1. Define your form.
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      email: "",
-    },
-  });
-
-  // 2. Define a submit handler.
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values);
-  }
-
   return (
     <footer className="w-full shrink-0 border-t border-gray-900 bg-footer px-4 pt-4">
       <div className="mx-auto justify-between gap-2 sm:grid sm:grid-cols-2 sm:grid-rows-1">
@@ -110,45 +80,7 @@ export default function Footer() {
               info@peripherie-lemag.com
             </a>
           </p>
-          <Form {...form}>
-            <form
-              onSubmit={form.handleSubmit(onSubmit)}
-              className="mt-8 flex w-full flex-col sm:max-w-xs lg:max-w-sm 2xl:max-w-lg"
-            >
-              <FormField
-                control={form.control}
-                name="email"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className="text-base">
-                      Pour ne rien manquer
-                    </FormLabel>
-                    <FormControl className="p-0">
-                      <Input
-                        placeholder="adresse@courriel.com"
-                        {...field}
-                        className="border-b border-black bg-footer p-0"
-                        required
-                      />
-                    </FormControl>
-                  </FormItem>
-                )}
-              />
-              <Button
-                size="reset"
-                variant="default"
-                type="submit"
-                className="group relative mb-6 mt-3 cursor-pointer rounded-full border border-black bg-footer pb-0 pt-0.5 text-base text-black hover:bg-gray-600 hover:bg-opacity-5 active:bg-opacity-10"
-              >
-                <span className="group-hover:invisible">
-                  S’INSCRIRE À L’INFOLETTRE
-                </span>
-                <span className="invisible absolute top-1 font-g2ciao text-sm group-hover:visible">
-                  S’INSCRIRE À L’INFOLETTRE
-                </span>
-              </Button>
-            </form>
-          </Form>
+          <NewsLetterSignUpForm className="mt-8 flex w-full flex-col sm:max-w-xs lg:max-w-sm 2xl:max-w-lg" />
         </div>
         {/* RIGHT SECTION */}
         <div className="sm:relative sm:max-w-xs lg:max-w-sm 2xl:max-w-lg">
